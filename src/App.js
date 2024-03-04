@@ -14,7 +14,7 @@ function App() {
 
     // Check if the file type is not text/plain (not a .txt file)
     if (file && file.type !== 'text/plain') {
-      alert('Please select a .txt file.');
+      alert('Please select a .txt file');
       return;
     }
 
