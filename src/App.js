@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   
-	const [fileContent, setFileContent] = useState('');
+	const [textContent, setTextContent] = useState('');
   const [totalWords, setTotalWords] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [key, setKey] = useState(0); // State to force re-render
@@ -24,7 +24,7 @@ function App() {
 
     reader.onload = (e) => {
       const content = e.target.result;
-      setFileContent(content);
+      setTextContent(content);
 
       const words = content.split(/\s+/).filter(word => word !== ''); // Split by whitespace and remove empty strings
       setTotalWords(words.length); // Calculate total number of words
@@ -35,7 +35,7 @@ function App() {
   };
 
   const handleRefresh = () => {
-    setFileContent('');
+    setTextContent('');
     setTotalWords(0);
     setKey(prevKey => prevKey + 1); // Change the key to force re-render
   };
@@ -46,7 +46,7 @@ function App() {
       {isLoading && <div>Loading...</div>} {/* Display loader if isLoading is true */}
       <div>
         <h2>File Content:</h2>
-        <p className="file-content">{fileContent}</p>
+        <p className="file-content">{textContent}</p>
       </div>
       <div>
         <h2>Total Words:</h2>
