@@ -45,11 +45,11 @@ function App() {
       <input key={key} type="file" onChange={handleFileChange} />
       {isLoading && <div>Loading...</div>} {/* Display loader if isLoading is true */}
       <div>
-        <h2>File Content:</h2>
-        <p className="file-content">{textContent}</p>
+        <h2 className="header-content">File Content:</h2>
+        <p className="text-content">{textContent}</p>
       </div>
       <div>
-        <h2>Total Words:</h2>
+        <h2 className="header-words">Total Words:</h2>
         <p className="total-words">{totalWords}</p>
       </div>
       <button className="refresh-button" onClick={handleRefresh}>Refresh</button>

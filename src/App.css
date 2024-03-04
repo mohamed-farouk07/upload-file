@@ -17,6 +17,19 @@ body {
   background-color: #fff;
 }
 
+.header-content{
+  color: #45a049;
+}
+
+.header-words{
+  color: #45a049;
+}
+
+.total-words{
+  font-size: 38px;
+  font-weight: bold;
+}
+
 input[type="file"] {
   margin-bottom: 20px;
 }
@@ -40,6 +53,8 @@ input[type="file"] {
 .refresh-button{
   background-color: #45a049;
   color: white;
+  padding: 10px 20px;
+  border: none;
 }
 
 h2 {
